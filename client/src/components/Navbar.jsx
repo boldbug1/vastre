@@ -34,6 +34,7 @@ export default function Navbar() {
           <span className="logo-sub">वस्त्र</span>
         </Link>
 
+        <div className={`nav-overlay ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)} />
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <Link to="/shop" onClick={() => setMenuOpen(false)}>All</Link>
           <Link to="/shop?category=sarees" onClick={() => setMenuOpen(false)}>Sarees</Link>

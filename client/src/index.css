@@ -153,8 +153,14 @@ input, textarea, select { font-family: inherit; }
   pointer-events: auto;
   animation: toastIn 0.35s ease forwards;
   cursor: pointer;
+  max-width: 360px;
 }
 .toast.removing { animation: toastOut 0.25s ease forwards; }
+
+@media (max-width: 480px) {
+  .toast-container { left: 12px; right: 12px; bottom: 16px; }
+  .toast { max-width: none; text-align: center; font-size: 12px; padding: 10px 16px; }
+}
 
 @keyframes toastIn {
   from { opacity: 0; transform: translateX(24px) scale(0.95); }
@@ -280,7 +286,7 @@ input, textarea, select { font-family: inherit; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
 @media (max-width: 480px)  {
-  .grid-4, .skeleton-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .grid-4, .skeleton-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .grid-3 { grid-template-columns: 1fr; }
 }
 
@@ -290,11 +296,13 @@ input, textarea, select { font-family: inherit; }
   margin: 0 auto;
   padding: 0 24px;
 }
-@media (max-width: 480px) { .container { padding: 0 16px; } }
+@media (max-width: 480px) { .container { padding: 0 14px; } }
+@media (max-width: 380px) { .container { padding: 0 10px; } }
 
 /* ── Section spacing ── */
 .section { padding: 64px 0; }
 .section-sm { padding: 40px 0; }
+@media (max-width: 480px) { .section { padding: 40px 0; } }
 
 /* ── Divider ── */
 .divider {

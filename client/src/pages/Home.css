@@ -96,8 +96,18 @@
 @media (max-width: 768px) {
   .hero { height: 70vh; min-height: 440px; }
   .hero-title { font-size: clamp(32px, 8vw, 48px); }
-  .hero-sub { font-size: 13px; }
+  .hero-sub { font-size: 13px; max-width: none; }
   .hero-scroll-hint { display: none; }
+  .hero-overlay { background: linear-gradient(100deg, rgba(26,16,8,0.78) 0%, rgba(26,16,8,0.45) 80%, transparent 100%); }
+}
+@media (max-width: 480px) {
+  .hero { height: 75vh; min-height: 380px; }
+  .hero-content { max-width: none; padding: 0 14px; }
+  .hero-tag { font-size: 10px; margin-bottom: 12px; }
+  .hero-title { font-size: clamp(28px, 10vw, 36px); margin-bottom: 14px; }
+  .hero-sub { font-size: 12px; margin-bottom: 24px; }
+  .hero-dots { bottom: 16px; }
+  .hero .btn-clay { padding: 10px 20px; font-size: 12px; }
 }
 
 /* ── Trust Bar ── */
@@ -122,11 +132,14 @@
 .trust-sub  { font-size: 11px; color: var(--muted); margin-top: 2px; }
 
 @media (max-width: 768px) {
-  .trust-inner { flex-wrap: wrap; }
+  .trust-inner { flex-wrap: wrap; padding: 16px; }
   .trust-item { flex: 0 0 calc(50% - 8px); }
 }
 @media (max-width: 480px) {
-  .trust-item { flex: 0 0 100%; }
+  .trust-inner { padding: 14px; gap: 10px; }
+  .trust-item { flex: 0 0 100%; gap: 10px; }
+  .trust-head { font-size: 12px; }
+  .trust-sub { font-size: 10px; }
 }
 
 /* ── Section header ── */
@@ -152,7 +165,8 @@
 
 @media (max-width: 480px) {
   .section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .section-title { font-size: 26px; }
+  .section-title { font-size: 24px; }
+  .section-eyebrow { font-size: 10px; }
 }
 
 /* ── Crafts ── */
@@ -160,6 +174,7 @@
   background: var(--sand);
   padding: 64px 0;
 }
+@media (max-width: 480px) { .crafts-section { padding: 40px 0; } }
 .crafts-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -206,8 +221,11 @@
 
 @media (max-width: 1024px) { .crafts-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) {
-  .crafts-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .craft-name { font-size: 18px; }
+  .crafts-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .craft-card { aspect-ratio: 2/3; }
+  .craft-name { font-size: 16px; }
+  .craft-region { font-size: 10px; }
+  .craft-info { padding: 30px 12px 14px; }
 }
 
 /* ── Story ── */
@@ -232,7 +250,9 @@
 }
 
 @media (max-width: 768px) {
-  .story-inner { grid-template-columns: 1fr; gap: 32px; }
+  .story-inner { grid-template-columns: 1fr; gap: 24px; }
   .story-img { order: -1; }
-  .story-banner { padding: 48px 16px; }
+  .story-banner { padding: 40px 14px; }
+  .story-text h2.display { font-size: 28px !important; }
+  .story-text p { font-size: 14px !important; }
 }

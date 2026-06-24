@@ -48,7 +48,7 @@ const TRUST_ITEMS = [
 
 function SkeletonFeatured() {
   return (
-    <div className="skeleton-grid" style={{gridTemplateColumns:'repeat(4,1fr)'}}>
+    <div className="skeleton-grid">
       {Array.from({ length: 4 }).map((_, i) => (
         <div key={i} className="skeleton-card">
           <div className="skeleton-img skeleton" />

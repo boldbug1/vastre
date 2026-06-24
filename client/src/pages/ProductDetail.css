@@ -129,5 +129,21 @@
 .related-section { padding: 48px 0 0; border-top: 1px solid var(--sand-dark); }
 
 @media (max-width: 768px) {
-  .detail-grid { grid-template-columns: 1fr; gap: 32px; }
+  .detail-grid { grid-template-columns: 1fr; gap: 24px; }
+  .product-detail { padding: 20px 0 60px; }
+  .breadcrumb { font-size: 11px; margin-bottom: 20px; flex-wrap: wrap; gap: 6px; }
+  .qty-row { flex-wrap: wrap; }
+  .add-cart-btn { flex: 1; min-width: 0; }
+}
+@media (max-width: 480px) {
+  .detail-info { gap: 12px; }
+  .detail-name { font-size: 22px; }
+  .detail-price { padding: 12px 0; }
+  .detail-perks { padding: 12px 0; }
+  .detail-desc { font-size: 13px; }
+  .reviews-section { padding: 32px 0; }
+  .review-card { padding: 14px; }
+  .review-form { padding: 20px; }
+  .related-section { padding: 32px 0 0; }
+  .detail-skeleton { padding: 16px 14px 60px; }
 }

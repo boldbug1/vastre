@@ -127,3 +127,18 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+@media (max-width: 480px) {
+  .product-info { padding: 10px 10px 12px; gap: 4px; }
+  .product-name { font-size: 13px; }
+  .product-category { font-size: 9px; }
+  .price-main { font-size: 14px; }
+  .price-mrp { font-size: 11px; }
+  .product-price-row { gap: 6px; }
+  .add-to-cart-btn { font-size: 11px; padding: 8px; margin-top: 8px; }
+  .product-discount-tag { font-size: 10px; padding: 2px 6px; top: 6px; left: 6px; }
+  .wishlist-btn { width: 28px; height: 28px; font-size: 14px; top: 6px; right: 6px; }
+  .low-stock-tag { font-size: 9px; padding: 2px 6px; bottom: 6px; left: 6px; }
+  .out-of-stock-overlay { font-size: 11px; }
+  .product-rating { font-size: 10px; }
+}

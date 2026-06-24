@@ -57,6 +57,16 @@
 }
 
 @media (max-width: 480px) {
-  .admin-page { padding: 32px 16px 60px; }
+  .admin-page { padding: 24px 14px 48px; }
+  .admin-title { font-size: 26px; }
+  .admin-header { margin-bottom: 24px; }
+  .admin-form { padding: 20px; gap: 12px; }
+  .admin-form-title { font-size: 18px; }
   .admin-row { grid-template-columns: 1fr; }
+  .admin-product-item { padding: 10px 12px; gap: 10px; }
+  .admin-product-img { width: 40px; height: 50px; }
+  .admin-product-name { font-size: 12px; }
+  .admin-product-meta { font-size: 10px; }
+  .admin-form-actions { flex-direction: column; gap: 8px; }
+  .admin-form-actions .btn { width: 100%; justify-content: center; }
 }
